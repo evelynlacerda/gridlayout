@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500&family=Rubik:wght@500&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500&display=swap');
+
+:root {
+    --first-color: #B9907A;
+    --second-color: #e5e7f5;
+
+    --dark400: #353535;
+    --dark300: #252525;
+    --dark200: #202020;
+
+    --blue900: #C6D2D8;
+    --blue800: #AABCC6;
+    --blue700: #839EAB;
+    --blue600: #6B8B9B;
+    --blue500: #466E82;
+    --blue400: #406476;
+    --blue300: #324E5C;
+    --blue200: #273D48;
+    --blue100: #1D2E37;
+}
