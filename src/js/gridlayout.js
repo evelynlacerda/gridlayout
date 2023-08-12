@@ -1,8 +1,16 @@
+const startAgain = document.getElementById('linkHome');
 const docsGrid = document.querySelector('#docs');
-const menu = document.querySelectorAll('#menu button .iconify');
+const menu = document.querySelectorAll('#menu button span');
 const buttonGap = document.querySelector('#buttonGap');
 const gapSquare = document.querySelector('#gridSquare');
 
+// BACK TO HOME
+startAgain.addEventListener('click', function() {
+    var novaURL = "index.html";
+    window.location.href = novaURL;
+});
+
+// MENU ACTIVE
 function removeActiveMenu() {
     menu.forEach((span) => {
         span.classList.remove('active')
@@ -15,22 +23,18 @@ menu.forEach((span) => {
 
         if (menuSelect) removeActiveMenu();
 
-        menu.classList.add('active');
+        span.classList.add('active');
 
     })
 });
 
-
+// GAP FOR GRID
 function gapActive() {
 
-    if (buttonGap.value === true) {
-        console.log('on'); 
-        gapSquare.style.gridGap = '1.6rem';
-    } else if (buttonGap.value === false) {
-        console.log('off');
-        gapSquare.style.gridGap = '0';
-    }
-}
+    buttonGap.checked
 
+        ? gapSquare.style.gridGap = '1.6rem'
+        : gapSquare.style.gridGap = '0rem'
+}
 
 buttonGap.addEventListener('click', gapActive);
