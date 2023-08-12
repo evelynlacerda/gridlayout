@@ -1,0 +1,226 @@
+body {
+    background: var(--dark300, #252525);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#menu {
+    position: fixed;
+    top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    background: var(--dark200, #202020);
+    padding: 1.4rem 2.4rem;
+    border-radius: 40px;
+    box-shadow: inset 0 -4px 6px rgba(0, 0, 0, .5), inset 0 4px 6px rgba(255, 255, 255, .08), 0 8px 16px rgba(0, 0, 0, .4), 0 2px 4px rgba(0, 0, 0, .75);
+    animation: fadeInDown;
+    animation-duration: 2s;
+
+    & .button-link {
+        background: none;
+        cursor: pointer;
+
+        & .iconify {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.8rem;
+            color: var(--dark400, #353535);
+        }
+
+        & .iconify:hover {
+            filter: brightness(1.5);
+        }
+
+        & .iconify:active {
+            color: var(--first-color, #B9907A);
+        }
+
+        & .active {
+            color: var(--first-color, #B9907A);
+        }
+    }
+}
+
+#docs {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    margin: 6rem 0 0;
+
+    & h2 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 3.2rem;
+        font-weight: 500;
+        color: var(--first-color, #B9907A);
+    }
+
+    & .main-text {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        gap: 1.6rem;
+
+        & p {
+            background: var(--dark200, #202020);
+            padding: 2.4rem;
+            border-radius: 16px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.8rem;
+            color: var(--second-color, #e5e7f5);
+            font-weight: 300;
+            line-height: 2.8rem;
+        }
+
+        & span {
+            font-family: 'Ubuntu Mono', monospace;
+            color: var(--first-color, #B9907A);
+            background: var(--dark100, #151515);
+            padding: .4rem .6rem;
+            border-radius: 4px;
+        }
+    }
+}
+
+#grid {
+    display: flex;
+    align-items: center;
+    gap: 6.4rem;
+    margin: 6rem 0 0;
+
+    & #gridSquare {
+        width: 40rem;
+        height: 40rem;
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        grid-gap: 1.6rem;
+
+        & .square {
+            border-radius: 5px;
+            box-shadow: inset 0 -4px 8px rgba(0, 0, 0, .5), inset 0 4px 8px rgba(255, 255, 255, .08), 0 6px 12px rgba(0, 0, 0, .3);
+            animation: zoomIn;
+            animation-duration: 2s;
+        }
+
+        & .square:nth-child(1) {
+            background: var(--blue900, #C6D2D8);
+        }
+
+        & .square:nth-child(2) {
+            background: var(--blue800, #AABCC6);
+        }
+
+        & .square:nth-child(3) {
+            background: var(--blue700, #839EAB);
+        }
+
+        & .square:nth-child(4) {
+            background: var(--blue600, #6B8B9B);
+        }
+
+        & .square:nth-child(5) {
+            background: var(--blue500, #466E82);
+        }
+
+        & .square:nth-child(6) {
+            background: var(--blue400, #406476);
+        }
+
+        & .square:nth-child(7) {
+            background: var(--blue300, #324E5C);
+        }
+
+        & .square:nth-child(8) {
+            background: var(--blue200, #273D48);
+        }
+
+        & .square:nth-child(9) {
+            background: var(--blue100, #1D2E37);
+        }
+    }
+
+    & .code-view {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        animation: fadeInRight;
+        animation-duration: 2s;
+
+        & .checkbox-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.6rem;
+
+            & p {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.4rem;
+                color: var(--first-color, #B9907A);
+                text-align: center;
+                line-height: 1.8rem;
+            }
+
+            & input[type="checkbox"] {
+                width: 48px;
+                height: 96px;
+                appearance: none;
+                position: relative;
+                background: var(--dark200, #4b1919);
+                border-radius: 50px;
+                box-shadow: inset 0 0 8px rgba(0, 0, 0, .25);
+                cursor: pointer;
+                transition: .3s ease-in-out;
+            }
+
+            & input:checked[type="checkbox"] {
+                background: var(--blue600, #6b8b9b);
+                box-shadow: inset 0 0 8px rgba(0, 0, 0, .75);
+            }
+
+            & input[type="checkbox"]:before {
+                content: '';
+                width: 32px;
+                height: 32px;
+                background: var(--grey500, #454545);
+                box-shadow: inset 0 -2px 4px rgba(0, 0, 0, .5), inset 0 2px 4px rgba(255, 255, 255, .15);
+                border-radius: 50%;
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                transition: .3s ease-in-out;
+            }
+
+            & input:checked[type="checkbox"]:before {
+                background: var(--dark200, #202020);
+                box-shadow: inset 0 -2px 4px rgba(0, 0, 0, .75), inset 0 2px 4px rgba(255, 255, 255, .25);
+                top: 56px;
+            }
+        }
+
+        & button {
+            background: var(--dark200, #202020);
+            height: 4.8rem;
+            padding: 0 2.4rem;
+            border-radius: 40px;
+            box-shadow: inset 0 -4px 8px rgba(0, 0, 0, .4), inset 0 4px 8px rgba(255, 255, 255, .05), 0 4px 10px rgba(0, 0, 0, .3), 0 2px 4px rgba(0, 0, 0, .5);
+            color: var(--dark400, #353535);
+            font-size: 1.4rem;
+            font-weight: 500;
+            transition: .1s ease-in-out;
+        }
+
+        & button:active {
+            color: var(--first-color, #B9907A);
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, .4), 0 4px 10px rgba(0, 0, 0, .3), 0 2px 4px rgba(0, 0, 0, .5);;
+        }
+    }
+}

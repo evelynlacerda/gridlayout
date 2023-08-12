@@ -12,32 +12,28 @@
     <link rel="stylesheet" href="./src/css/gridlayout.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
-    <!-- START JAVASCRIPT LINK -->
-
-    <script src="./src/js/gridlayout.js" defer></script>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
-
-    <!-- END JAVASCRIPT LINK -->
 
 </head>
 
 <body>
 
     <main id="menu">
-        <button type="submit">
-            <span class="iconify" data-icon="mdi:text-box"></span>
+        <button type="submit" class="button-link" id="linkHome">
+            <span class="iconify" data-icon="heroicons:home-solid"></span>
         </button>
-        <button type="submit">
+        <button type="submit" class="button-link" id="linkDocs">
+            <span class="iconify active" data-icon="mdi:text-box"></span>
+        </button>
+        <button type="submit" class="button-link">
             <span class="iconify" data-icon="fluent:grid-28-filled"></span>
         </button>
-        <button type="submit">
+        <button type="submit" class="button-link">
             <span class="iconify" data-icon="mingcute:grid-2-fill"></span>
         </button>
-        <button type="submit">
+        <button type="submit" class="button-link">
             <span class="iconify" data-icon="uis:window-grid"></span>
         </button>
-        <button type="submit">
+        <button type="submit" class="button-link">
             <span class="iconify" data-icon="geo:turf-square-grid"></span>
         </button>
     </main>
@@ -45,12 +41,53 @@
     <section id="docs">
         <h2>display: grid</h2>
         <div class="main-text">
-            <p>O <span>display: grid</span> é uma propriedade CSS que permite criar um layout de grade (grid layout) em uma página web. Com essa propriedade, você pode organizar os elementos HTML em linhas e colunas, criando layouts complexos e responsivos de maneira mais fácil.</p>
-            <p>Para utilizar <span>display: grid</span>, você precisa definir um elemento pai como um container da grade, e em seguida, aplicar a propriedade <span>display: grid</span> nesse container. Em seguida, você pode definir as áreas onde deseja posicionar os elementos filhos utilizando outras propriedades, como <span>grid-template-columns</span>, <span>grid-template-rows</span>, <span>grid-gap, entre outras</span>.</p>
-            <p>A grande vantagem do grid é que você pode criar layouts complexos e responsivos sem depender tanto de floats, flexbox ou outras técnicas mais antigas de posicionamento. Com <span>display: grid</span>, você tem mais controle sobre o posicionamento dos elementos, o que torna o design e o desenvolvimento de layouts mais eficientes.</p>
-            <p>Vale ressaltar que o <span>display: grid</span> é suportado na maioria dos navegadores modernos. No entanto, como em qualquer recurso CSS avançado, é sempre importante verificar a compatibilidade em navegadores mais antigos, se necessário, utilizando recursos de fallback ou bibliotecas como o Autoprefixer para garantir a compatibilidade cruzada.</p>
+            <p>O <span>display: grid</span> é uma propriedade CSS que permite criar um layout de grade (grid layout) em
+                uma página web. Com essa propriedade, você pode organizar os elementos HTML em linhas e colunas, criando
+                layouts complexos e responsivos de maneira mais fácil.</p>
+
+            <p>Para utilizar <span>display: grid</span>, você precisa definir um elemento pai como um container da
+                grade, e em seguida, aplicar a propriedade <span>display: grid</span> nesse container. Em seguida, você
+                pode definir as áreas onde deseja posicionar os elementos filhos utilizando outras propriedades, como
+                <span>grid-template-columns</span>, <span>grid-template-rows</span>, <span>grid-gap, entre
+                    outras</span>.
+            </p>
+
+            <p>A grande vantagem do grid é que você pode criar layouts complexos e responsivos sem depender tanto de
+                floats, flexbox ou outras técnicas mais antigas de posicionamento. Com <span>display: grid</span>, você
+                tem mais controle sobre o posicionamento dos elementos, o que torna o design e o desenvolvimento de
+                layouts mais eficientes.</p>
+
+            <p>Vale ressaltar que o <span>display: grid</span> é suportado na maioria dos navegadores modernos. No
+                entanto, como em qualquer recurso CSS avançado, é sempre importante verificar a compatibilidade em
+                navegadores mais antigos, se necessário, utilizando recursos de fallback ou bibliotecas como o
+                Autoprefixer para garantir a compatibilidade cruzada.</p>
         </div>
     </section>
+
+    <section id="grid">
+        <div id="gridSquare">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="code-view">
+            <div class="checkbox-grid">
+                <p>Grid Gap<br>OFF</p>
+                <input type="checkbox" name="grid-gap" id="buttonGap" checked>
+                <p>Grid Gap<br>ON</p>
+            </div>
+            <button type="submit" id="codeGap">CODE VIEW</button>
+        </div>
+    </section>
+
+    <script src="./src/js/gridlayout.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
 </body>
 
