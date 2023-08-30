@@ -17,14 +17,14 @@
 
 <body>
 
-    <main id="menu">
+    <main id="menu" class="fadeInDown">
         <button type="submit" class="button-link" id="linkHome">
             <span class="iconify" data-icon="heroicons:home-solid"></span>
         </button>
         <button type="submit" class="button-link" id="linkDocs">
-            <span class="iconify active" data-icon="mdi:text-box"></span>
+            <span class="iconify" data-icon="mdi:text-box"></span>
         </button>
-        <button type="submit" class="button-link">
+        <button type="submit" class="button-link" id="linkGrid">
             <span class="iconify" data-icon="fluent:grid-28-filled"></span>
         </button>
         <button type="submit" class="button-link">
@@ -32,9 +32,6 @@
         </button>
         <button type="submit" class="button-link">
             <span class="iconify" data-icon="uis:window-grid"></span>
-        </button>
-        <button type="submit" class="button-link">
-            <span class="iconify" data-icon="geo:turf-square-grid"></span>
         </button>
     </main>
 
@@ -66,15 +63,15 @@
 
     <section id="grid">
         <div id="gridSquare">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
+            <div class="square blue900 zoomIn"></div>
+            <div class="square blue800 zoomIn"></div>
+            <div class="square blue700 zoomIn"></div>
+            <div class="square blue600 zoomIn"></div>
+            <div class="square blue500 zoomIn"></div>
+            <div class="square blue400 zoomIn"></div>
+            <div class="square blue300 zoomIn"></div>
+            <div class="square blue200 zoomIn"></div>
+            <div class="square blue100 zoomIn"></div>
         </div>
         <div class="code-view">
             <div class="checkbox-grid">
@@ -82,7 +79,99 @@
                 <input type="checkbox" name="grid-gap" id="buttonGap" checked>
                 <p>Grid Gap<br>ON</p>
             </div>
-            <button type="submit" id="codeGap">CODE VIEW</button>
+            <button type="submit" class="showDialog fadeInUp" id="codeviewer">CODE VIEW</button>
+            <div class="modal-backdrop hide" id="backdrop"></div>
+            <div class="modal hide" id="modaldialog">
+                <button type="button" id="closecode" class="closemodal">
+                    <span class="iconify" data-icon="line-md:close-circle-twotone"></span>
+                </button>
+                <p class="modal-code">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut illum dolore voluptatum autem
+                    architecto fugit, perspiciatis est blanditiis? Consequuntur nam odit beatae qui quo vitae similique
+                    sed magni cum ipsam.
+                    <br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga esse pariatur maiores ipsum nisi sunt
+                    ab facilis, quaerat laboriosam non voluptatem praesentium, doloribus, officia exercitationem
+                    assumenda error fugit itaque repellendus.
+
+                    Blanditiis, animi quaerat deleniti, inventore necessitatibus facere id, maiores iure ad atque
+                    asperiores tenetur. Sit, amet nisi iusto delectus velit autem, doloribus a, nemo reiciendis placeat
+                    accusamus ipsam quae excepturi.
+
+                    Animi incidunt veritatis expedita. Expedita reprehenderit et fugit, facere eaque sequi quo, odio est
+                    illum corporis doloremque qui architecto aspernatur! Adipisci eos soluta consequatur, assumenda
+                    error molestias repudiandae dolores repellendus.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="area">
+        <div id="gridarea">
+            <div class="squarearea blue400 zoomIn"></div>
+            <div class="squarearea blue600 zoomIn"></div>
+            <div class="squarearea blue200 zoomIn"></div>
+            <div class="squarearea blue300 zoomIn"></div>
+            <div class="squarearea blue100 zoomIn"></div>
+            <div class="squarearea blue500 zoomIn"></div>
+        </div>
+        <button type="submit" class="showDialog fadeInUp" id="codeviewer">CODE VIEW</button>
+        <div class="modal-backdrop hide" id="backdrop"></div>
+        <div class="modal hide" id="modaldialog">
+            <button type="button" id="closecode" class="closemodal">
+                <span class="iconify" data-icon="line-md:close-circle-twotone"></span>
+            </button>
+            <p class="modal-code">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut illum dolore voluptatum autem
+                architecto fugit, perspiciatis est blanditiis? Consequuntur nam odit beatae qui quo vitae similique
+                sed magni cum ipsam.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga esse pariatur maiores ipsum nisi sunt
+                ab facilis, quaerat laboriosam non voluptatem praesentium, doloribus, officia exercitationem
+                assumenda error fugit itaque repellendus.
+
+                Blanditiis, animi quaerat deleniti, inventore necessitatibus facere id, maiores iure ad atque
+                asperiores tenetur. Sit, amet nisi iusto delectus velit autem, doloribus a, nemo reiciendis placeat
+                accusamus ipsam quae excepturi.
+
+                Animi incidunt veritatis expedita. Expedita reprehenderit et fugit, facere eaque sequi quo, odio est
+                illum corporis doloremque qui architecto aspernatur! Adipisci eos soluta consequatur, assumenda
+                error molestias repudiandae dolores repellendus.
+            </p>
+        </div>
+    </section>
+
+    <section id="template">
+        <div id="grid-temp">
+            <div class="temp-square blue600 fadeInDown"></div>
+            <div class="temp-square blue500 fadeInLeft"></div>
+            <div class="temp-square blue300 zoomIn"></div>
+            <div class="temp-square blue200 fadeInRight"></div>
+            <div class="temp-square blue100 fadeInUp"></div>
+        </div>
+        <button type="submit" class="showDialog fadeInUp" id="codeviewer">CODE VIEW</button>
+        <div class="modal-backdrop hide" id="backdrop"></div>
+        <div class="modal hide" id="modaldialog">
+            <button type="button" id="closecode" class="closemodal">
+                <span class="iconify" data-icon="line-md:close-circle-twotone"></span>
+            </button>
+            <p class="modal-code">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut illum dolore voluptatum autem
+                architecto fugit, perspiciatis est blanditiis? Consequuntur nam odit beatae qui quo vitae similique
+                sed magni cum ipsam.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga esse pariatur maiores ipsum nisi sunt
+                ab facilis, quaerat laboriosam non voluptatem praesentium, doloribus, officia exercitationem
+                assumenda error fugit itaque repellendus.
+
+                Blanditiis, animi quaerat deleniti, inventore necessitatibus facere id, maiores iure ad atque
+                asperiores tenetur. Sit, amet nisi iusto delectus velit autem, doloribus a, nemo reiciendis placeat
+                accusamus ipsam quae excepturi.
+
+                Animi incidunt veritatis expedita. Expedita reprehenderit et fugit, facere eaque sequi quo, odio est
+                illum corporis doloremque qui architecto aspernatur! Adipisci eos soluta consequatur, assumenda
+                error molestias repudiandae dolores repellendus.
+            </p>
         </div>
     </section>
 
