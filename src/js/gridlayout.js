@@ -1,17 +1,39 @@
 // BACK TO HOME
 const startAgain = document.querySelector('#linkHome');
 
-startAgain.addEventListener('click', function() {
+startAgain.addEventListener('click', function () {
     var novaURL = "index.html";
     window.location.href = novaURL;
 });
 
 // MENU
 const menuLinks = document.querySelectorAll('buttonlink');
-const docs = document.querySelector('#docs');
-const grid = document.querySelector('#grid');
-const area = document.querySelector('#area');
-const temp = document.querySelector('#template');
+const sections = document.querySelectorAll('section');
+
+
+menuLinks.forEach((link) => {
+    link.addEventListener('click', function () {
+
+        const target = link.dataset.target;
+        sections.forEach((section) => {
+            console.log(target);
+            if (section.getAttribute('id') === target) {
+                section.classList.remove('hideSection');
+            } else {
+                section.classList.add('hideSection');
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
 
 
 
