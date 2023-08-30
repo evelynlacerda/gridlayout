@@ -7,7 +7,7 @@ startAgain.addEventListener('click', function() {
 });
 
 // MENU
-const menuLinks = document.getElementsByClassName('button-link');
+const menuLinks = document.querySelectorAll('buttonlink');
 const docs = document.querySelector('#docs');
 const grid = document.querySelector('#grid');
 const area = document.querySelector('#area');
@@ -22,12 +22,12 @@ const modal = document.getElementsByClassName('modal');
 const backdrop = document.getElementsByClassName('modal-backdrop');
 
 const toggleModal = () => {
-    modal.classList.toggle('hide');
-    backdrop.classList.toggle('hide');
+    modal[0].classList.toggle('hide');
+    backdrop[0].classList.toggle('hide');
 }
 
 [codeButton, closeModal, backdrop].forEach((mod) => {
-    mod.addEventListener('click', () => toggleModal());
+    mod[0].addEventListener('click', () => toggleModal());
 });
 
 // GAP FOR GRID
