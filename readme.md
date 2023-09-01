@@ -11,7 +11,7 @@
 <p>The display grid is one of the most powerful CSS tools. It allows you to create complex layouts that were previously impossible with CSS. In this project, I used grid layout to show how simple is to do some layouts using this property.</p>
 
 #### 🔗 Access the project:
-<p>Click <a href="https://evelynlacerda.github.io/gridlayout/gridlayout.html"><b>here</b></a>  to access.</p>
+<p>Click <a href="https://evelynlacerda.github.io/gridlayout/gridlayout.html" target="_blank"><b>here</b></a>  to access.</p>
 
 #### 🧲 Clone this repository:
 ```bash
