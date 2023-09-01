@@ -20,9 +20,11 @@
 - [?] Responsive layout *(comming soon)*
 
 ### 🚀 Technologies used in this project:
-<img src="https://img.shields.io/badge/HTML5-0c1014?style=for-the-badge&logo=html5&logoColor=E34F26">
-<img src="https://img.shields.io/badge/CSS3-0c1014?style=for-the-badge&logo=css3&logoColor=1572B6">
-<img src="https://img.shields.io/badge/JavaScript-0c1014?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+<div style="display: block">
+    <img src="https://img.shields.io/badge/HTML5-0c1014?style=for-the-badge&logo=html5&logoColor=E34F26">
+    <img src="https://img.shields.io/badge/CSS3-0c1014?style=for-the-badge&logo=css3&logoColor=1572B6">
+    <img src="https://img.shields.io/badge/JavaScript-0c1014?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+</div>
 
 <br>
 
@@ -40,9 +42,10 @@
 ### 🧱 Improve my code:
 <p>If you have any suggestion, tip or advice, please feel free to send a pull request. I'm always open to learn and improve my skills!</p>
 <b>Clone this repository:</b><br>
+
 ```bash
 git clone https://github.com/evelynlacerda/gridlayout.git
 ```
 
 ### 📝 License:
-[![GitHub license](https://img.shields.io/github/license/evelynlacerda/display-grid?color=52AC96)](https://github.com/evelynlacerda/display-grid/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/evelynlacerda/gridlayout?color=52AC96)](https://github.com/evelynlacerda/gridlayout/blob/main/LICENSE)
