@@ -2,11 +2,21 @@
     <img src="./src/assets/img/grid.gif">
 </p>
 <h1 align="center">Grid Layout</h1>
+<h4 align="center">
+
+![GitHub](https://img.shields.io/github/license/evelynlacerda/gridlayout?style=flat-square&labelColor=0c1014)
+
+</h4>
 
 <p>The display grid is one of the most powerful CSS tools. It allows you to create complex layouts that were previously impossible with CSS. In this project, I used grid layout to show how simple is to do some layouts using this property.</p>
 
-### 🔗 Access the project:
+#### 🔗 Access the project:
 <p>Click <a href="https://evelynlacerda.github.io/gridlayout/gridlayout.html"><b>here</b></a>  to access.</p>
+
+#### 🧲 Clone this repository:
+```bash
+git clone https://github.com/evelynlacerda/gridlayout.git
+```
 
 <br>
 
@@ -41,11 +51,4 @@
 
 ### 🧱 Improve my code:
 <p>If you have any suggestion, tip or advice, please feel free to send a pull request. I'm always open to learn and improve my skills!</p>
-<b>Clone this repository:</b><br>
-
-```bash
-git clone https://github.com/evelynlacerda/gridlayout.git
-```
-
-### 📝 License:
-[![GitHub license](https://img.shields.io/github/license/evelynlacerda/gridlayout?color=52AC96)](https://github.com/evelynlacerda/gridlayout/blob/main/LICENSE)
+<br>
