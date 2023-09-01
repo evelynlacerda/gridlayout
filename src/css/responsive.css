@@ -1,0 +1,39 @@
+@media (max-width: 1205px) {
+    body {
+        justify-content: inherit;
+    }
+
+    #docs {
+        padding: 16rem 0 0;
+
+        & .main-text {
+            gap: 3.2rem;
+        }
+    }
+
+    #grid {
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        & .code-view {
+            animation: fadeInDown;
+
+            & .checkbox-grid {
+                flex-direction: row;
+
+                & input[type="checkbox"] {
+                    width: 96px;
+                    height: 48px;
+                }
+
+                & input:checked[type="checkbox"]:before {
+                    top: 8px;
+                    left: 56px;
+                }
+            }
+        }
+    }
+}

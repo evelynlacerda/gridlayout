@@ -84,102 +84,18 @@ body {
     background: var(--blue100, #1D2E37);
 }
 
-/* BUTTONS FOR MODAL */
-.showDialog {
-    background: var(--dark200, #202020);
-    height: 4.8rem;
-    padding: 0 2.4rem;
-    border-radius: 40px;
-    box-shadow: inset 0 -4px 8px rgba(0, 0, 0, .4), inset 0 4px 8px rgba(255, 255, 255, .05), 0 4px 10px rgba(0, 0, 0, .3), 0 2px 4px rgba(0, 0, 0, .5);
-    color: var(--dark400, #353535);
-    font-size: 1.4rem;
-    font-weight: 500;
-    transition: .1s ease-in-out;
-}
-
-.showDialog:active {
-    color: var(--first-color, #B9907A);
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, .4), 0 4px 10px rgba(0, 0, 0, .3), 0 2px 4px rgba(0, 0, 0, .5);
-}
-
-/* MODAL STYLE */
-.modal-backdrop,
-.modal {
-    opacity: 1;
-    transition: .5s;
-    pointer-events: all;
-}
-
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 5;
-}
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 64rem;
-    max-width: 80%;
-    height: 48rem;
-    max-height: 80%;
-    transform: translate(-50%, -50%);
-    background: var(--dark300, #252525);
-    border: 8px solid var(--dark400, #303030);
-    border-radius: 16px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, .5);
-    padding: 1.6rem;
-    z-index: 10;
-    overflow: hidden;
-
-    & button {
-        position: relative;
-        left: 100%;
-        transform: translate(-100%);
-        background: none;
-        border: none;
-        z-index: 15;
-        margin-bottom: .8rem;
-
-        & .iconify {
-            font-size: 3.2rem;
-            color: var(--close);
-        }
-    }
-
-    & .modal-code {
-        margin-bottom: 50rem;
-        font-family: 'Space Mono', monospace;
-        font-size: 1.6rem;
-        text-align: justify;
-        color: var(--dark600);
-        height: 100%;
-        overflow-y: auto;
-    }
-}
-
-.hide {
-    opacity: 0;
-    pointer-events: none;
-    top: 0;
-}
-
 /* SECTIONS */
 #docs {
+    max-width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.4rem;
-    margin: 6rem 0 0;
+    padding: 6rem 0 0;
 
     & h2 {
         font-family: 'Ubuntu', sans-serif;
-        font-size: 3.2rem;
+        font-size: 2.6rem;
         font-weight: 500;
         color: var(--first-color, #B9907A);
     }
@@ -211,10 +127,10 @@ body {
 }
 
 #grid {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 6.4rem;
-    margin: 6rem 0 0;
+    padding: 6rem 0 0;
 
     & #gridSquare {
         width: 40rem;
@@ -229,70 +145,65 @@ body {
         }
     }
 
-    & .code-view {
+    & .checkbox-grid {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         align-items: center;
         gap: 4rem;
         animation: fadeInRight;
         animation-duration: 2s;
+        gap: 1.6rem;
 
-        & .checkbox-grid {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.6rem;
+        & p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.4rem;
+            color: var(--first-color, #B9907A);
+            text-align: center;
+            line-height: 1.8rem;
+        }
 
-            & p {
-                font-family: 'Ubuntu', sans-serif;
-                font-size: 1.4rem;
-                color: var(--first-color, #B9907A);
-                text-align: center;
-                line-height: 1.8rem;
-            }
+        & input[type="checkbox"] {
+            width: 48px;
+            height: 96px;
+            appearance: none;
+            position: relative;
+            background: var(--dark200, #4b1919);
+            border-radius: 50px;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, .25);
+            cursor: pointer;
+            transition: .3s ease-in-out;
+        }
 
-            & input[type="checkbox"] {
-                width: 48px;
-                height: 96px;
-                appearance: none;
-                position: relative;
-                background: var(--dark200, #4b1919);
-                border-radius: 50px;
-                box-shadow: inset 0 0 8px rgba(0, 0, 0, .25);
-                cursor: pointer;
-                transition: .3s ease-in-out;
-            }
+        & input:checked[type="checkbox"] {
+            background: var(--blue500, #466E82);
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, .75);
+        }
 
-            & input:checked[type="checkbox"] {
-                background: var(--blue600, #6b8b9b);
-                box-shadow: inset 0 0 8px rgba(0, 0, 0, .75);
-            }
+        & input[type="checkbox"]:before {
+            content: '';
+            width: 32px;
+            height: 32px;
+            background: var(--grey500, #454545);
+            box-shadow: inset 0 -2px 4px rgba(0, 0, 0, .5), inset 0 2px 4px rgba(255, 255, 255, .15);
+            border-radius: 50%;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            transition: .3s ease-in-out;
+        }
 
-            & input[type="checkbox"]:before {
-                content: '';
-                width: 32px;
-                height: 32px;
-                background: var(--grey500, #454545);
-                box-shadow: inset 0 -2px 4px rgba(0, 0, 0, .5), inset 0 2px 4px rgba(255, 255, 255, .15);
-                border-radius: 50%;
-                position: absolute;
-                top: 8px;
-                left: 8px;
-                transition: .3s ease-in-out;
-            }
-
-            & input:checked[type="checkbox"]:before {
-                background: var(--dark200, #202020);
-                box-shadow: inset 0 -2px 4px rgba(0, 0, 0, .75), inset 0 2px 4px rgba(255, 255, 255, .25);
-                top: 56px;
-            }
+        & input:checked[type="checkbox"]:before {
+            background: var(--dark200, #202020);
+            box-shadow: inset 0 -2px 4px rgba(0, 0, 0, .75), inset 0 2px 4px rgba(255, 255, 255, .25);
+            top: 56px;
         }
     }
 }
 
 #area {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -339,7 +250,7 @@ body {
 }
 
 #template {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 3.2rem;
@@ -350,9 +261,7 @@ body {
         height: auto;
         margin-top: 6rem;
         grid:
-            "header header header header header" 100px
-            "left center center center right" 250px
-            "footer footer footer footer footer" 100px;
+            "header header header header header" 100px "left center center center right" 250px "footer footer footer footer footer" 100px;
         grid-gap: 1.6rem;
 
         & .temp-square {
@@ -364,22 +273,22 @@ body {
             background-color: var(--blue600);
             grid-area: header;
         }
-    
+
         & :nth-child(2) {
             background-color: var(--blue400);
             grid-area: left;
         }
-    
+
         & :nth-child(3) {
             background-color: var(--blue300);
             grid-area: center;
         }
-    
+
         & :nth-child(4) {
             background-color: var(--blue200);
             grid-area: right;
         }
-        
+
         & :nth-child(5) {
             background-color: var(--blue100);
             grid-area: footer;
@@ -392,27 +301,23 @@ body {
     animation-name: zoomIn;
     animation-duration: 2s;
 }
+
 .fadeInUp {
     animation-name: fadeInUp;
     animation-duration: 2s;
 }
+
 .fadeInDown {
     animation-name: fadeInDown;
     animation-duration: 2s;
 }
+
 .fadeInRight {
     animation-name: fadeInRight;
     animation-duration: 2s;
 }
+
 .fadeInLeft {
     animation-name: fadeInLeft;
     animation-duration: 2s;
-}
-
-.showSection {
-    display: flex;
-}
-
-.hideSection {
-    display: none;
 }
